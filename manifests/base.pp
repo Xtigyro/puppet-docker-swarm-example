@@ -14,7 +14,7 @@ class base {
 
   ::docker::run { 'swarm':
     image   => 'swarm',
-    command => "join --addr=${::ipaddress_eth1}:2375 consul://${::ipaddress_eth1}:8500/swarm_nodes"
+    command => 'join --addr="%{facts.networking.ip}":2375 consul://"%{facts.networking.ip}":8500/swarm_nodes'
   }
 }
 
@@ -25,7 +25,7 @@ node 'swarm-1' {
   ::docker::run { 'swarm-manager':
     image   => 'swarm',
     ports   => '3000:2375',
-    command => "manage consul://${::ipaddress_eth1}:8500/swarm_nodes",
+    command => 'manage consul://"%{facts.networking.ip}":8500/swarm_nodes',
     require => Docker::Run['swarm'],
   }
 
