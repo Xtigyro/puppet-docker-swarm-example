@@ -5,7 +5,7 @@ Docker orchestration effort, and allows for managing containers across a
 fleet of hosts rather than just on a single host.
 
 The [Puppet Docker module](https://forge.puppetlabs.com/garethr/docker)
-supports installing and managing Docker, and running individual docker
+supports installing and managing Docker, and running individual Docker
 containers. Given Swarm is packaged as containers, that means we can
 install a Swarm cluster using Puppet.
 
@@ -21,12 +21,12 @@ Puppet.
 This will launch 2 virtual machines, install Consul and register a
 cluster, install Docker and Swarm and then establish the swarm.
 
-You can access the swwarm using a docker client, either from you local
+You can access the Swarm using a Docker client, either from you local
 machine or from one of the virtual machines. For instance:
 
     docker -H tcp://10.20.3.11:3000 info
 
-If you don't have docker installed locally you can run the above command
+If you don't have Docker installed locally you can run the above command
 from one of the virtual machines using:
 
     vagrant ssh swarm-1 -c "docker -H tcp://localhost:3000 info"
