@@ -2,7 +2,7 @@
 .tmp
 .bundle
 vendor/**/
-.Vagrantfile.swp
+*.swp
 .librarian
 *.log
 *.lock
