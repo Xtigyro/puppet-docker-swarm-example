@@ -19,6 +19,7 @@ mod 'saz-sudo', '6.0.0'
 mod 'saz-motd', '2.4.0'
 mod 'saz-timezone', '5.1.1'
 mod 'saz-ssh', '5.0.0'
+mod 'saz-dnsmasq', '1.4.0'
 
 mod 'stm-debconf', '2.3.0'
 
