@@ -78,7 +78,7 @@ something like:
 
 ## The Tour
 
-Quick recap on consul API - create
+Quick recap on Consul API - create
 
     # docker run -d -p 8080:8080 --name="hello" mrbarker/python-flask-hello
     # docker run -d -p 8081:8080 -p 8443:8443 --name="hello2" mrbarker/python-flask-hello
@@ -86,7 +86,7 @@ Quick recap on consul API - create
 
     # docker logs registrator
 
-This demonstrates the automatic registration of services into consul. The
+This demonstrates the automatic registration of services into Consul. The
 following shows the registration and the subsequent DNS requests.
 
     # curl localhost:8500/v1/catalog/services
