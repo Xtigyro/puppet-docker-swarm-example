@@ -168,7 +168,6 @@ Quick recap on Consul API - create two new services:
 
     # docker run -d -p 8080:8080 --name="hello" mrbarker/python-flask-hello
     # docker run -d -p 8081:8080 -p 8443:8443 --name="hello2" mrbarker/python-flask-hello
-    <id>
 
     # docker logs registrator
 
