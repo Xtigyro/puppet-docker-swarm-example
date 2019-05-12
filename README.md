@@ -1,4 +1,4 @@
-# Using Puppet to launch a Docker Swarm
+# Using Puppet to Launch a Docker Swarm Cluster
 
 [Docker Swarm](https://docs.docker.com/swarm/) is part of the official
 Docker orchestration effort, and allows for managing containers across a
