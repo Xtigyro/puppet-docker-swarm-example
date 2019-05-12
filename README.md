@@ -95,7 +95,7 @@ following shows the registration and the subsequent DNS requests.
     # curl localhost:8500/v1/catalog/nodes
     [{"Node":"swarm-1","Address":"10.20.3.11"}]
 
-Check DNS by appending .service.consul to the service names,
+Check DNS by appending .service.consul to the service names:
 
     # dig python-flask-hello-8443.service.consul +short
     172.17.0.5
@@ -103,7 +103,7 @@ Check DNS by appending .service.consul to the service names,
     1 1 8443 swarm-1.node.dc1.consul.
     # dig python-flask-hello-8443.service.consul -t srv +short
 
-Reverse DNS - (XXX double check long vs. short name returned)
+Reverse DNS - (XXX double check long vs. short name returned):
 
     # dig swarm-1.node.dc1.consul +short
     10.20.3.11
