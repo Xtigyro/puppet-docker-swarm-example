@@ -120,7 +120,7 @@ First, we run the main Swarm container on all hosts:
 ```puppet
 ::docker::run { 'swarm':
   image   => 'swarm',
-  command => 'join --addr="%{networking.interfaces.enp0s8.ip}":2375 consul://"%{networking.interfaces.enp0s8.ip}":8500/swarm_nodes'
+  command => 'join --addr="%{networking.interfaces.enp0s8.ip}":2375 consul://"%{networking.interfaces.enp0s8.ip}":8500/swarm_nodes',
 }
 ```
 
