@@ -19,9 +19,9 @@ Puppet.
     vagrant up --provider virtualbox
 
 This will launch 2 virtual machines, install Consul and register a
-cluster, install Docker and Swarm and then establish the Swarm.
+cluster, install Docker and Swarm and then establish the swarm.
 
-You can access the Swarm using a Docker client, either from you local
+You can access the swarm using a Docker client, either from you local
 machine or from one of the virtual machines. For instance:
 
     docker -H tcp://10.20.3.11:3000 info
