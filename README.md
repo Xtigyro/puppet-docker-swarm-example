@@ -19,7 +19,7 @@ Puppet.
     vagrant up --provider virtualbox
 
 This will launch 2 virtual machines, install Consul and register a
-cluster, install Docker and Swarm and then establish the swarm.
+cluster, install Docker and Swarm and then establish the Swarm.
 
 You can access the Swarm using a Docker client, either from you local
 machine or from one of the virtual machines. For instance:
@@ -113,9 +113,9 @@ Reverse DNS - (XXX double check long vs. short name returned):
 
 ## Implementation details
 
-The example uses the Docker module to launch the swarm containers. 
+The example uses the Docker module to launch the Swarm containers. 
 
-First, we run the main swarm container on all hosts:
+First, we run the main Swarm container on all hosts:
 
 ```puppet
 ::docker::run { 'swarm':
