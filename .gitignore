@@ -6,5 +6,4 @@ vendor/**/
 .librarian
 *.log
 *.lock
-modules
-vendor
+modules/**/
