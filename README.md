@@ -142,5 +142,5 @@ Anderson](https://github.com/solarkennedy). Much of the Consul configuration is 
 consul::config_hash:
   data_dir: '/opt/consul'
   client_addr: '0.0.0.0'
-  bind_addr: "%{::ipaddress_eth1}"
+  bind_addr: "%{networking.interfaces.enp0s8.ip}"
 ```
