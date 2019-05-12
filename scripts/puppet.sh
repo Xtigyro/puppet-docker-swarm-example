@@ -12,23 +12,13 @@ if which /usr/local/bin/puppet > /dev/null 2>&1; then
   exit 0
 fi
 
-# Ruby on Ubuntu is broken by design :(
-echo -e "----> ${green}Installing ruby${end}"
+# Update Pkg Manager Data
 sudo apt-get update
-sudo apt-get install ruby2.0 ruby2.0-dev -y
-for i in erb gem irb rake rdoc ri ruby testrb
-do
-  sudo ln -sf /usr/bin/${i}2.0 /usr/bin/${i}
-done
 
-# Required for installing signed packages
-sudo apt-get install debian-keyring debian-archive-keyring -y
+# Install puppet/facter/ruby
+echo -e "----> ${green}Installing Puppet and Ruby ${end}"
+sudo apt-get install -y puppet facter ruby
 
-# Install language locale as without can
-# interfere with package installation
-sudo apt-get install language-pack-en -y
-
-# Install puppet/facter
-echo -e "----> ${green}Installing puppet${end}"
-sudo gem install puppet -v 3.7.5 --no-ri --no-rdoc
-sudo gem install facter --no-ri --no-rdoc
+#sudo gem update --system
+#sudo gem install puppet -v 6.4.0
+#sudo gem install facter

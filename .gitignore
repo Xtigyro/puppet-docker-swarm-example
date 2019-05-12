@@ -2,3 +2,9 @@
 .tmp
 .bundle
 vendor/**/
+.Vagrantfile.swp
+.librarian
+*.log
+*.lock
+modules
+vendor
