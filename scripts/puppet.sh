@@ -18,7 +18,3 @@ sudo apt-get update
 # Install puppet/facter/ruby
 echo -e "----> ${green}Installing Puppet and Ruby ${end}"
 sudo apt-get install -y puppet facter ruby
-
-#sudo gem update --system
-#sudo gem install puppet -v 6.4.0
-#sudo gem install facter
