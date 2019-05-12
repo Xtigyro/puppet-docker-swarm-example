@@ -1,6 +1,5 @@
 forge "https://forgeapi.puppetlabs.com"
 
-#mod 'camptocamp-archive', '0.9.0'
 mod 'puppet-archive', '3.2.1'
 mod 'camptocamp-systemd', '2.4.0'
 

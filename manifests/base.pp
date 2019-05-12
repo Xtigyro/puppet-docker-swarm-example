@@ -17,20 +17,20 @@ class base {
 
   ::docker::run { 'swarm':
     image            => 'swarm:latest',
-    command          => 'join --addr="%{networking.interfaces.enp0s8.ip}":2375 consul://"%{networking.interfaces.enp0s8.ip}":8500/swarm_nodes',
+    command          => 'join --addr="${facts['networking']['interfaces']['enp0s8']['ip']}":2375 consul://"${facts['networking']['interfaces']['enp0s8']['ip']}":8500/swarm_nodes',
     extra_parameters => '--name swarm',
     require          => Class['docker::service'],
   }
   ::docker::run { 'registrator':
     image            => 'gliderlabs/registrator:latest',
     volumes          => [ '/var/run/docker.sock:/tmp/docker.sock' ],
-    command          => 'consul://"%{networking.interfaces.enp0s8.ip}":8500',
+    command          => 'consul://"${facts['networking']['interfaces']['enp0s8']['ip']}":8500',
     extra_parameters => '--name registrator',
     require          => Class['docker::service'],
   }
 
-  # Ensure dnsmasq is installed after package work for consul and docker;
-  # otherwise DNS resolution issues if dnsmasq is installed but service hasn't
+  # Ensure dnsmasq is installed after completing the package installation for Consul and Docker;
+  # Otherwise, DNS resolution issues occur if dnsmasq is installed but their services haven't
   # started yet; affects further package installations.
   class { '::dnsmasq':
     require => [
@@ -55,7 +55,7 @@ node 'swarm-1' {
   ::docker::run { 'swarm-manager':
     image            => 'swarm',
     ports            => '3000:2375',
-    command          => 'manage consul://"%{networking.interfaces.enp0s8.ip}":8500/swarm_nodes',
+    command          => 'manage consul://"${facts['networking']['interfaces']['enp0s8']['ip']}":8500/swarm_nodes',
     extra_parameters => '--name swarm-manager',
     require          => Class['docker::service'],
   }
