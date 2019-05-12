@@ -6,7 +6,7 @@ green='\e[0;32m'
 end='\e[0m'
 
 
-# if puppet is already installed do nothing
+# if puppet is already installed - do nothing
 if which /usr/local/bin/puppet > /dev/null 2>&1; then
   echo -e "${orange}----> Puppet is aready installed${end}"
   exit 0
