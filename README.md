@@ -33,16 +33,54 @@ from one of the virtual machines using:
 
 This should print something like:
 
-    Containers: 4
+    Containers: 5
+    Running: 5
+    Paused: 0
+    Stopped: 0
+    Images: 4
+    Server Version: swarm/1.2.9
+    Role: primary
+    Strategy: spread
+    Filters: health, port, containerslots, dependency, affinity, constraint, whitelist
     Nodes: 2
-     swarm-1: 10.20.3.11:2375
-      └ Containers: 3
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
-     swarm-2: 10.20.3.12:2375
-      └ Containers: 1
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
+    swarm-1: 10.20.3.11:2375
+    └ ID: LBE4:VBSS:MLT3:S2BG:P7BP:H2I3:E2NM:DTNR:Z3V5:VZG7:H6G2:KFIW|10.20.3.11:2375
+    └ Status: Healthy
+    └ Containers: 3 (3 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:38:13Z
+    └ ServerVersion: 18.09.6
+    swarm-2: 10.20.3.12:2375
+    └ ID: RVWC:SZWS:GDUP:3AQ3:DN4O:P3JB:RIXZ:7MLY:HJFB:JDVL:GITS:TQDZ|10.20.3.12:2375
+    └ Status: Healthy
+    └ Containers: 2 (2 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:37:44Z
+    └ ServerVersion: 18.09.6
+    Plugins:
+    Volume: 
+    Network: 
+    Log: 
+    Swarm: 
+    NodeID: 
+    Is Manager: false
+    Node Address: 
+    Kernel Version: 4.15.0-48-generic
+    Operating System: linux
+    Architecture: amd64
+    CPUs: 4
+    Total Memory: 2.021GiB
+    Name: 008d3394a360
+    Docker Root Dir: 
+    Debug Mode (client): false
+    Debug Mode (server): false
+    Experimental: false
+    Live Restore Enabled: false
+
 
 ## Growing the cluster
 
