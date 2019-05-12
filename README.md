@@ -90,28 +90,76 @@ virtual machines.
     INSTANCES=4 vagrant up --provider virtualbox
 
 This will give us a total of 4 virtual machines, 2 new ones and the 2
-existing machines we already launched. Once the machines have launched
-you should be able to run the above commands again, this time you'll get
+existing machines we already launched. Once the machines have launched,
+you should be able to run the above commands again - this time you'll get
 something like:
 
-    Containers: 6
+    Containers: 9
+    Running: 9
+    Paused: 0
+    Stopped: 0
+    Images: 8
+    Server Version: swarm/1.2.9
+    Role: primary
+    Strategy: spread
+    Filters: health, port, containerslots, dependency, affinity, constraint, whitelist
     Nodes: 4
-     swarm-1: 10.20.3.11:2375
-      └ Containers: 3
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
-     swarm-2: 10.20.3.12:2375
-      └ Containers: 1
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
-     swarm-3: 10.20.3.13:2375
-      └ Containers: 1
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
-     swarm-4: 10.20.3.14:2375
-      └ Containers: 1
-      └ Reserved CPUs: 0 / 1
-      └ Reserved Memory: 0 B / 490 MiB
+    swarm-1: 10.20.3.11:2375
+    └ ID: LBE4:VBSS:MLT3:S2BG:P7BP:H2I3:E2NM:DTNR:Z3V5:VZG7:H6G2:KFIW|10.20.3.11:2375
+    └ Status: Healthy
+    └ Containers: 3 (3 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:46:50Z
+    └ ServerVersion: 18.09.6
+    swarm-2: 10.20.3.12:2375
+    └ ID: RVWC:SZWS:GDUP:3AQ3:DN4O:P3JB:RIXZ:7MLY:HJFB:JDVL:GITS:TQDZ|10.20.3.12:2375
+    └ Status: Healthy
+    └ Containers: 2 (2 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:46:40Z
+    └ ServerVersion: 18.09.6
+    swarm-3: 10.20.3.13:2375
+    └ ID: JHQY:UWZB:4GDJ:7D46:W7AK:FIDO:O6YD:2W77:JYZF:NH5T:DNUV:BPNH|10.20.3.13:2375
+    └ Status: Healthy
+    └ Containers: 2 (2 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:46:34Z
+    └ ServerVersion: 18.09.6
+    swarm-4: 10.20.3.14:2375
+    └ ID: 5GG4:FSNF:LLHZ:KMWI:5YDX:FG3F:4WHR:KJ7X:SILJ:3VRT:DG3K:RK2L|10.20.3.14:2375
+    └ Status: Healthy
+    └ Containers: 2 (2 Running, 0 Paused, 0 Stopped)
+    └ Reserved CPUs: 0 / 2
+    └ Reserved Memory: 0 B / 1.01 GiB
+    └ Labels: kernelversion=4.15.0-48-generic, operatingsystem=Ubuntu 18.04.2 LTS, ostype=linux, storagedriver=overlay2
+    └ UpdatedAt: 2019-05-12T17:47:15Z
+    └ ServerVersion: 18.09.6
+    Plugins:
+    Volume: 
+    Network: 
+    Log: 
+    Swarm: 
+    NodeID: 
+    Is Manager: false
+    Node Address: 
+    Kernel Version: 4.15.0-48-generic
+    Operating System: linux
+    Architecture: amd64
+    CPUs: 8
+    Total Memory: 4.041GiB
+    Name: 008d3394a360
+    Docker Root Dir: 
+    Debug Mode (client): false
+    Debug Mode (server): false
+    Experimental: false
+    Live Restore Enabled: false
+
 
 
 ## The Tour
