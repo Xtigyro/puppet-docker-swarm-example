@@ -13,7 +13,6 @@ class base {
   }
 
   ::docker::image { 'swarm:latest': }
-  ::docker::image { 'busybox': }
   ::docker::image { 'gliderlabs/registrator:latest': }
 
   ::docker::run { 'swarm':
