@@ -1,3 +1,4 @@
+---
 :hierarchy:
   - "nodes/%{::fqdn}"
   - common
@@ -7,3 +8,5 @@
 
 :yaml:
   :datadir: '/vagrant/hieradata'
+
+...
