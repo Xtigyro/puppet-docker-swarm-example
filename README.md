@@ -21,12 +21,12 @@ Puppet.
 This will launch 2 virtual machines, install Consul and register a
 cluster, install Docker and Swarm and then establish the swarm.
 
-You can access the swarm using a Docker client, either from you local
+You can access the swarm using a Docker client, either from your local
 machine or from one of the virtual machines. For instance:
 
     docker -H tcp://10.20.3.11:3000 info
 
-If you don't have Docker installed locally you can run the above command
+If you don't have Docker installed locally, you can run the above command
 from one of the virtual machines using:
 
     vagrant ssh swarm-1 -c "docker -H tcp://localhost:3000 info"
@@ -62,25 +62,24 @@ This should print something like:
     └ UpdatedAt: 2019-05-12T17:37:44Z
     └ ServerVersion: 18.09.6
     Plugins:
-    Volume: 
-    Network: 
-    Log: 
-    Swarm: 
-    NodeID: 
+    Volume:
+    Network:
+    Log:
+    Swarm:
+    NodeID:
     Is Manager: false
-    Node Address: 
+    Node Address:
     Kernel Version: 4.15.0-48-generic
     Operating System: linux
     Architecture: amd64
     CPUs: 4
     Total Memory: 2.021GiB
     Name: 008d3394a360
-    Docker Root Dir: 
+    Docker Root Dir:
     Debug Mode (client): false
     Debug Mode (server): false
     Experimental: false
     Live Restore Enabled: false
-
 
 ## Growing the cluster
 
@@ -141,26 +140,24 @@ something like:
     └ UpdatedAt: 2019-05-12T17:47:15Z
     └ ServerVersion: 18.09.6
     Plugins:
-    Volume: 
-    Network: 
-    Log: 
-    Swarm: 
-    NodeID: 
+    Volume:
+    Network:
+    Log:
+    Swarm:
+    NodeID:
     Is Manager: false
-    Node Address: 
+    Node Address:
     Kernel Version: 4.15.0-48-generic
     Operating System: linux
     Architecture: amd64
     CPUs: 8
     Total Memory: 4.041GiB
     Name: 008d3394a360
-    Docker Root Dir: 
+    Docker Root Dir:
     Debug Mode (client): false
     Debug Mode (server): false
     Experimental: false
     Live Restore Enabled: false
-
-
 
 ## The Tour
 
@@ -195,10 +192,9 @@ Reverse DNS - (XXX double check long vs. short name returned):
     # dig -x 10.20.3.11 +short
     swarm-1.
 
-
 ## Implementation details
 
-The example uses the Docker module to launch the Swarm containers. 
+The example uses the Docker module to launch the Swarm containers.
 
 First, we run the main Swarm container on all hosts:
 
@@ -221,7 +217,7 @@ Then, on one host we run the Swarm Manager:
 ```
 
 Consul is managed by the excellent [Consul module](https://github.com/solarkennedy) from [Kyle
-Anderson](https://github.com/solarkennedy). Much of the Consul configuration is in the hiera data, for example:
+Anderson](https://github.com/solarkennedy). Much of the Consul configuration is in the Hiera data, for example:
 
 ```yaml
 consul::config_hash:
